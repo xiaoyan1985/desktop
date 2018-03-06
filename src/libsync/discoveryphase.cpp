@@ -414,6 +414,10 @@ void DiscoverySingleDirectoryJob::lsJobFinishedWithoutErrorSlot()
         emit finishedWithError(ERRNO_WRONG_CONTENT, QLatin1String("Server error: PROPFIND reply is not XML formatted!"));
         deleteLater();
         return;
+    } else if (!_error.isEmpty()) {
+        emit finishedWithError(ERRNO_WRONG_CONTENT, _error);
+        deleteLater();
+        return;
     }
     emit etag(_firstEtag);
     emit etagConcatenation(_etagConcatenation);
