@@ -1034,7 +1034,7 @@ void ownCloudGui::slotShowSettings()
 void ownCloudGui::slotShowSyncProtocol()
 {
     slotShowSettings();
-    _settingsDialog->showActivityPage();
+    //_settingsDialog->showActivityPage();
 }
 
 
