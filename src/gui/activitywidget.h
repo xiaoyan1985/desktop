@@ -96,7 +96,8 @@ private slots:
     void scheduleWidgetToRemove(NotificationWidget *widget, int milliseconds = 4500);
     void slotCheckToCleanWidgets();
     void slotNotificationRequestFinished(int statusCode);
-    void slotButtonClickedOnListView(const QModelIndex &index);
+    void slotPrimaryButtonClickedOnListView(const QModelIndex &index);
+    void slotSecondaryButtonClickedOnListView(const QModelIndex &index);
 
 private:
     void showLabels();
